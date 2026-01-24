@@ -13222,7 +13222,7 @@
 				)
 			)
 		)
-		(property "Value" "27R"
+		(property "Value" "33R"
 			(at 172.72 80.01 90)
 			(effects
 				(font
@@ -13257,7 +13257,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2909343"
+		(property "LCSC" "C25105"
 			(at 172.72 81.915 0)
 			(effects
 				(font
@@ -13780,7 +13780,7 @@
 				)
 			)
 		)
-		(property "Value" "27R"
+		(property "Value" "33R"
 			(at 172.72 88.265 90)
 			(effects
 				(font
@@ -13815,7 +13815,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2909343"
+		(property "LCSC" "C25105"
 			(at 172.72 84.455 0)
 			(effects
 				(font
