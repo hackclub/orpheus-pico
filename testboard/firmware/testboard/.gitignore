@@ -1,0 +1,8 @@
+build/*
+!build/
+!*.uf2
+!*.hex
+!*.bin
+!*.elf
+
+.vscode/*
