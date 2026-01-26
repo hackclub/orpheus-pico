@@ -33,4 +33,5 @@ private
 *.fls
 *.log
 *.synctex.gz
-
+.history
+sym-lib-table

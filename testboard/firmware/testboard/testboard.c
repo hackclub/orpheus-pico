@@ -17,18 +17,22 @@ int config_leds(void) {
 
 int main()
 {
-    //stdio_init_all();
+    stdio_init_all();
+    printf("configuring leds\n");
     int result = config_leds();
     hard_assert(result == PICO_OK);
+    printf("leds configured, turning pins on\n");
 
 
     while (true) {
         for(int i = 0; i < sizeof(gpios)/sizeof(gpios[0]); i++) { //active low
+            printf("turning on pin %d\n", gpios[i]);
             gpio_put(gpios[i], 0);
             if(gpios[i] == 23) {gpio_put(gpios[i], 1);}
             sleep_ms(150);
         }
         for(int i = 0; i < sizeof(gpios)/sizeof(gpios[0]); i++) {
+            printf("turning off pin %d\n", gpios[i]);
             gpio_put(gpios[i], 1);
             if(gpios[i] == 23) {gpio_put(gpios[i], 0);}
             sleep_ms(300);
