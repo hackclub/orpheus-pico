@@ -6,6 +6,8 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+include(pico_sdk_import.cmake)
+
 # Initialise pico_sdk from installed location
 # (note this can come from environment, CMake cache etc)
 
@@ -33,9 +35,11 @@ project(testboard C CXX ASM)
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
+add_subdirectory(pi-pico-adafruit-neopixels/pico_neopixels build)
+
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(testboard testboard.c )
+add_executable(testboard testboard.cpp )
 
 pico_set_program_name(testboard "testboard")
 pico_set_program_version(testboard "0.1")
@@ -46,7 +50,7 @@ pico_enable_stdio_usb(testboard 1)
 
 # Add the standard library to the build
 target_link_libraries(testboard
-        pico_stdlib)
+        pico_stdlib pico_neopixel)
 
 # Add the standard include files to the build
 target_include_directories(testboard PRIVATE

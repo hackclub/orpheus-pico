@@ -1,0 +1,3 @@
+[submodule "testboard/firmware/testboard/pi-pico-adafruit-neopixels"]
+	path = testboard/firmware/testboard/pi-pico-adafruit-neopixels
+	url = https://github.com/martinkooij/pi-pico-adafruit-neopixels/

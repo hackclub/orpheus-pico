@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include "Adafruit_NeoPixel.hpp"
+
+const int NEOPIXEL = 24;
 
 int gpios[] = {
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
@@ -23,6 +26,8 @@ int main()
     hard_assert(result == PICO_OK);
     printf("leds configured, turning pins on\n");
 
+    Adafruit_NeoPixel pixels(1, NEOPIXEL, NEO_GRB + NEO_KHZ800);
+    pixels.begin();
 
     while (true) {
         for(int i = 0; i < sizeof(gpios)/sizeof(gpios[0]); i++) { //active low
@@ -35,6 +40,12 @@ int main()
             printf("turning off pin %d\n", gpios[i]);
             gpio_put(gpios[i], 1);
             if(gpios[i] == 23) {gpio_put(gpios[i], 0);}
+            sleep_ms(300);
+        }
+
+        for (int i = 0; i < 10; ++i) {
+            pixels.setPixelColor(0, pixels.Color((i%3)*150, ((i+1)%3)*150 ,((i+2)%3)*150));
+            pixels.show();
             sleep_ms(300);
         }
     }
