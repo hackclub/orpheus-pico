@@ -9,7 +9,7 @@ Welcome! This is the newest edition of our Orpheus Pico - an RP2040-based develo
 The Orpheus Pico features:
 - an RP2040 microcontroller
 - 32 addressable GPIO pins
-- onboard active-high LED (IO23)
+- onboard active-high LED (IO25)
 - onboard RGB LED (IO24)
 - USB-C connection
 - high-current power lines
@@ -34,7 +34,7 @@ There have been many major changes from earlier versions of the Orpheus Pico! Se
 ## Usage
 
 Usage of the Orpheus Pico almost completely matches that of a Raspberry Pi Pico. You can use several different frameworks, such as the Pico SDK in C++, Arduino, or Micro/Circuitpython. Some board specific stuff:
-- onboard active-high LED on IO13
+- onboard active-high LED on IO25
 - onboard RGB LED on IO24
 - user-configurable button on IO23 (use a pullup in code)
 
