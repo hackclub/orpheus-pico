@@ -44,3 +44,25 @@ Usage of the Orpheus Pico almost completely matches that of a Raspberry Pi Pico.
 - user-configurable button on IO23 (use a pullup in code)
 
 The RGB led can be controlled as a typical neopixel. You can use libraries like the Adafruit Neopixel library in C++.
+
+---
+
+## Ordering
+
+Want to fabricate your own? Here's a short guide for using JLCPCB to produce assembled versions of these boards!
+
+1. Clone and extract this repository. All production files are found in the /productions directory.
+2. Open up JLCPCB, and get to the "Order Now" screen.
+3. Drag-and-drop or select through the file menu the orphkicad.zip file in production under the Gerber box at the top.
+4. Set PCB settings as desired. We suggest:
+    - Quantity - however much you please
+    - PCB Color - Black
+    - Surface Finish - ENIG (for that gold-colored look)
+5. Scroll to the bottom and check "PCB Assembly"
+6. Ensure PCBA type is set to Standard (or set to Economic if you don't want the neopixel)
+7. Set PCBA Quantity as desired
+8. Press "Next" on the right (x2)
+9. Upload bom.csv and positions.csv to their corresponding file uploads (BOM File & CPL File)
+10. _**Check D2, D3, SW1, SW2, and SW3**_ in BOM confirmation and press "Next"
+11. Press "Next" in Component Placements confirmation.
+12. You've made it! Review the price and press Save to Cart.
