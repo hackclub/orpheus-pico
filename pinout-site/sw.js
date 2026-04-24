@@ -21,6 +21,8 @@ function precache() {
     return cache.addAll([
     ".",
       "pinout-logo.png",
+      "orph-pico.webp",
+      "orph-pico-underside.webp",
       "orph-pico.png",
       "index.html",
       "register_serviceworker.js",
