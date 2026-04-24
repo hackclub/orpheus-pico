@@ -101,23 +101,13 @@
                 <th scope="col">Pin</th><th scope="col">Function</th><th scope="col">Notes</th>
             </thead>
             <tbody class="power_pins">
-                <tr><td>VSYS</td><td>System voltage in/out</td><td><sup>*</sup>5V <em>out</em> when powered by USB (diode to VBUS),<br>1.8V to 5.5V <em>in</em> if powered externally</td></tr>
-                <tr><td>3V3 Out</td><td>Chip 3V3 supply</td><td>Can be used to power external circuitry,<br>recommended to keep the load less than 300mA</td></tr>
+                <tr><td>VSYS</td><td>System voltage in/out</td><td><sup>*</sup>5V <em>out</em> when powered by USB (diode to VBUS),<br>3.5V to 5.5V <em>in</em> if powered externally</td></tr>
+                <tr><td>3V3 Out</td><td>Chip 3V3 supply</td><td>Can be used to power external circuitry,<br>recommended to keep the load less than 200mA</td></tr>
             </tbody>
             <tbody>
-                <tr><td>GP23</td><td>RT6150B-33GQW Power-Select</td><td>LOW (default) for high efficiency (PFM)<br>HIGH for improved ripple (PWM)</td></tr>
-                <tr><td>GP24</td><td>VBUS Sense</td><td>Detect USB power or VBUS pin</td></tr>
+                <tr><td>GP23</td><td>User button</td><td>LOW when pressed, normally floating.</tr>
+                <tr><td>GP24</td><td>Neopixel</td><td>WS2812B user neopixel</td></tr>
                 <tr><td>GP25</td><td>User LED</td><td></td></tr>
-                <tr><td>GP29 / A3</td><td>VSYS Sense</td><td>Read VSYS/3 through resistor divider and FET Q1</td></tr>
-                <tr><td>A4</td><td>Temperature</td><td>Read onboard temperature sensor</td></tr>
-            </tbody>
-            <tbody class="tpads">
-                <tr><td>TP1</td><td>Ground</td><td>close coupled ground for differential USB signals</td></tr>
-                <tr><td>TP2</td><td>USB DM</td><td>USB Data Negative pin</td></tr>
-                <tr><td>TP3</td><td>USB DP</td><td>USB Data Positive pin</td></tr>
-                <tr><td>TP4</td><td>GPIO23/SMPS PS Pin</td><td>Marked do not use in datasheet</td></tr>
-                <tr><td>TP5</td><td>GPIO25/LED</td><td>Not recommended to be used in datasheet<br>can only be used as an output with special care</td></tr>
-                <tr><td>TP6</td><td>BOOTSEL</td><td>Short low at power-up to boot into BOOTSEL</td></tr>
             </tbody>
         </table>
     </article>
